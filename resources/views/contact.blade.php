@@ -40,7 +40,7 @@
                         <!-- Contact Info Content Start -->
                         <div class="contact-info-content">
                             <p>contact us</p>
-                            <h3>+1 317 111 1111</h3>
+                            <h3>+1 317 993 7623</h3>
                         </div>
                         <!-- Contact Info Content End -->
                     </div>

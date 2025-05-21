@@ -34,3 +34,9 @@ Route::get('projects', function() {
     $images = array_map('basename', $files);
     return view('projects', ['images' => $images]);
 })->name('projects');
+
+Route::get('/change-language/{locale}', function ($locale = 'es') {
+    App::setLocale($locale);
+    Session::put('locale', $locale);
+    return redirect()->back();
+})->name('change-language');

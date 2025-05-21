@@ -58,19 +58,41 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="/">Home</a>
+                            <li class="nav-item"><a class="nav-link" href="/">{{ __('Home') }}</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about">{{ __('About Us') }}</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/services">{{ __('Services') }}</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/projects">{{ __('Projects') }}</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/contact">{{ __('Contact Us') }}</a></li>
+                            <li class="menu-item-has-children"><a href="#">
+                                @if ( app()->currentLocale() == 'en')
+                                    <img height="25" src="{{ asset('assets/images/flag/usa.png') }}" alt="English language icon">
+                                @elseif( app()->currentLocale() == 'es')
+                                    <img height="25" src="{{ asset('assets/images/flag/spain.png') }}" alt="Spanish language icon">
+                                @endif
+                            </a>
+                            <ul class="sub-menu">
+                                @if ( app()->currentLocale() == 'en')
+
+                                    <li data-locale="fr" class="ss-change-locale"><a href="{{ route('change-language', 'es') }}"><img
+                                                height="25"
+                                                src="{{ asset('assets/images/flag/spain.png') }}" alt="Spanish language icon"> <span
+                                                class="ml-2">{{ __('Spanish') }}</span></a></li>
+                                @elseif( app()->currentLocale() == 'es')
+                                    <li data-locale="en" class="ss-change-locale"><a href="{{ route('change-language', 'en') }}"><img
+                                                height="25"
+                                                src="{{ asset('assets/images/flag/usa.png') }}" alt="English language icon"> <span
+                                                class="ml-2">{{ __('English') }}</span></a></li>
+                                @endif
+                            </ul>
+                        </li>
                         </ul>
                     </div>
 
                     <!-- Header Btn Start -->
                     <div class="header-btn">
                         <div class="header-contact-btn">
-                            <a href="tel:+131711111111" class="btn-phone"><img src="{{ asset('assets/images/icon-phone.svg') }}" alt="">+1 317 111 1111</a>
+                            <a href="tel:+13179937623" class="btn-phone"><img src="{{ asset('assets/images/icon-phone.svg') }}" alt="">+1 317 993 7623</a>
                         </div>
 
                         <!-- Toggle Button trigger modal Start -->
@@ -91,8 +113,8 @@
                                         <img src="{{ asset('assets/images/icon-white-phone.svg') }}" alt="">
                                     </div>
                                     <div class="header-contact-box-content">
-                                        <h3>phone</h3>
-                                        <p>+1 317 111 1111</p>
+                                        <h3>{{ __('Phone') }}</h3>
+                                        <p>+1 317 993 7623</p>
                                     </div>
                                 </div>
                                 <!-- Header Contact Box End -->
@@ -103,7 +125,7 @@
                                         <img src="{{ asset('assets/images/icon-white-mail.svg') }}" alt="">
                                     </div>
                                     <div class="header-contact-box-content">
-                                        <h3>email</h3>
+                                        <h3>{{ __('Email') }}</h3>
                                         <p>info@vistapeakroofing.com</p>
                                     </div>
                                 </div>
@@ -115,15 +137,15 @@
                                         <img src="{{ asset('assets/images/icon-white-location.svg') }}" alt="">
                                     </div>
                                     <div class="header-contact-box-content">
-                                        <h3>address</h3>
-                                        <p>Plainfield, Indiana, USA</p>
+                                        <h3>{{ __('Address') }}</h3>
+                                        <p>3204 Wintersong Dr, Indianapolis, IN</p>
                                     </div>
                                 </div>
                                 <!-- Header Contact Box End -->
 
                                 <!-- Header Social Links Start -->
                                 <div class="header-social-links">
-                                    <h3>stay connected</h3>
+                                    <h3>{{ __('Stay connected') }}</h3>
                                     <ul>
                                         <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
@@ -169,14 +191,14 @@
             <div class="col-md-6">
                 <!-- Footer Contact Box Start -->
                 <div class="footer-contact-box footer-links">
-                    <h3>contact us</h3>
+                    <h3>{{ __('Contact Us') }}</h3>
                     <!-- Footer Contact Item Start -->
                     <div class="footer-contact-item">
                         <div class="icon-box">
                             <img src="{{ asset('assets/images/icon-location.svg') }}" alt="">
                         </div>
                         <div class="footer-contact-content">
-                            <p>Plainfield, Indiana, USA</p>
+                            <p>3204 Wintersong Dr, Indianapolis, IN</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -187,7 +209,7 @@
                             <img src="{{ asset('assets/images/icon-phone.svg') }}" alt="">
                         </div>
                         <div class="footer-contact-content">
-                            <p>+1 317 111 1111</p>
+                            <p>+1 317 993 7623</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -209,8 +231,8 @@
             <div class="col-md-6 d-flex justify-content-md-end">
                 <!-- Footer Social Link Start -->
                 <div class="footer-social-links footer-links">
-                    <h3>Share With Us</h3>
-                    <p>Special offers on social networks</p>
+                    <h3>{{ __('Share with us') }}</h3>
+                    <p>{{ __('Special offers on social networks') }}</p>
                     <ul>
                         <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
@@ -230,10 +252,10 @@
                     <!-- Footer Menu Start -->
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="/">home</a></li>
-                            <li><a href="/about">about us</a></li>
-                            <li><a href="/services">services</a></li>
-                            <li><a href="/contact">contact</a></li>
+                            <li><a href="/">{{ __('Home') }}</a></li>
+                            <li><a href="/about">{{ __('About Us') }}</a></li>
+                            <li><a href="/services">{{ __('Services') }}</a></li>
+                            <li><a href="/contact">{{ __('Contact Us') }}</a></li>
                         </ul>
                     </div>
                     <!-- Footer Menu End -->
@@ -242,7 +264,7 @@
                 <div class="col-md-6">
                     <!-- Footer Copyright Start -->
                     <div class="footer-copyright-text">
-                        <p>Copyright © {{ date('Y') }} All Rights Reserved. | Powered by <a href="https://maatonggroup.com/usa" target="_blank" style="color: var(--accent-color);">MaatongTech USA, LLC</a></p>
+                        <p>{{ __('Copyright :date', ['date' => date('Y')]) }} <a href="https://maatonggroup.com/usa" target="_blank" style="color: var(--accent-color);">MaatongTech USA, LLC</a></p>
                     </div>
                     <!-- Footer Copyright End -->
                 </div>
