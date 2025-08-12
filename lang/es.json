@@ -92,5 +92,40 @@
     "Testimonials": "Testimonios",
     "Testimonials Title": "Lo que dicen nuestros clientes",
     "Testimonials Text": "Escuche a nuestros clientes satisfechos mientras comparten sus experiencias con nuestros servicios de techado, destacando nuestra profesionalidad.",
-    "Trusted by :number": "De confianza por :number empresas"
+    "Trusted by :number": "De confianza por :number empresas",
+
+    "Our Approach": "Nuestro Enfoque",
+    "Our Approach Title": "Soluciones de techado de expertos y reparación",
+    "Our Mission" : "Nuestra Misión",
+    "Our Mission Text": "Nuestra misión es proporcionar la construcción de techos de alta calidad y servicios de reparación con un enfoque en la durabilidad, la artesanía, y la satisfacción del cliente, Estamos comprometidos a garantizar la seguridad.",
+    "Our Vision": "Nuestra Visión",
+    "Our Vision Text": "Nuestra visión es ser el proveedor líder de soluciones de techado innovadoras y sostenibles, estableciendo el estándar de excelencia en la construcción y reparación.",
+    "Our Value": "Nuestro Valor",
+    "Our Value Text": "Nuestros valores están arraigados en la integridad, la calidad y la satisfacción del cliente. Priorizamos la seguridad, la artesanía y la transparencia en cada proyecto, garantizando soluciones de techado duraderas.",
+
+    "Key Benefits": "Beneficios Clave",
+    "Key Benefits Title": "Beneficios de techado fiables en los que puede confiar",
+    "Key Benefits Description": "Nuestros fiables servicios de techado proporcionan tranquilidad gracias a una durabilidad excepcional, una mano de obra experta y amplias garantías.",
+
+    "Durability and Longevity": "Durabilidad y longevidad",
+    "Durability and Longevity Text": "Los materiales de alta calidad y una instalación experta prolongan la vida útil de su tejado, protegiendo su propiedad durante años.",
+    "Enhanced Curb Appeal": "Mejora del atractivo exterior",
+    "Enhanced Curb Appeal Text": "Un tejado bien mantenido mejora el aspecto general de su casa o negocio, aumentando su valor y atractivo.",
+    "Safety and Peace of Mind": "Seguridad y tranquilidad",
+    "Safety and Peace of Mind Text": "Los servicios profesionales de techado garantizan la seguridad de su tejado, dándole confianza en la protección de su hogar o negocio",
+
+    "Total Project": "Proyecto Total",
+
+
+    "Email Address": "Correo electrónico",
+    "Location": "Localización",
+    "Quotation Form": "Formulario de presupuesto",
+    "Get a free quote": "Obtener un presupuesto gratuito",
+
+    "First Name": "Nombre",
+    "Last Name": "Apellidos",
+    "Phone Number": "Número de teléfono",
+    "Message": "Mensaje",
+    "Submit": "Enviar"
+
 }

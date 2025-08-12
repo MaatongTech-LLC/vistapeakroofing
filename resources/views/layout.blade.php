@@ -32,8 +32,170 @@
     <link rel="stylesheet" href="{{ asset('assets/css/mousecursor.css') }}">
     <!-- Main Custom Css -->
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" media="screen">
+
+    @stack('styles')
+    <style>
+        /* Main popup container */
+        .swal2-popup {
+            background: var(--white-color) !important;
+            border: 1px solid var(--divider-color) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+            font-family: var(--default-font) !important;
+        }
+
+        /* Title styling */
+        .swal2-title {
+            color: var(--primary-color) !important;
+            font-family: var(--accent-font) !important;
+            font-weight: 600 !important;
+            margin-bottom: 1rem !important;
+        }
+
+        /* Content text */
+        .swal2-html-container {
+            color: var(--text-color) !important;
+            font-family: var(--default-font) !important;
+            line-height: 1.5 !important;
+        }
+
+        /* Confirm button (primary) */
+        .swal2-confirm {
+            background-color: var(--accent-color) !important;
+            color: var(--white-color) !important;
+            border: none !important;
+            border-radius: 6px !important;
+            font-family: var(--default-font) !important;
+            font-weight: 500 !important;
+            padding: 12px 24px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .swal2-confirm:hover {
+            background-color: #d10000 !important; /* Darker shade of accent color */
+            transform: translateY(-1px) !important;
+        }
+
+        /* Cancel button (secondary) */
+        .swal2-cancel {
+            background-color: transparent !important;
+            color: var(--text-color) !important;
+            border: 1px solid var(--divider-color) !important;
+            border-radius: 6px !important;
+            font-family: var(--default-font) !important;
+            font-weight: 500 !important;
+            padding: 12px 24px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .swal2-cancel:hover {
+            background-color: var(--divider-color) !important;
+            color: var(--primary-color) !important;
+        }
+
+        /* Input fields */
+        .swal2-input {
+            border: 1px solid var(--divider-color) !important;
+            border-radius: 6px !important;
+            color: var(--primary-color) !important;
+            font-family: var(--default-font) !important;
+            padding: 12px 16px !important;
+            margin: 8px 0 !important;
+        }
+
+        .swal2-input:focus {
+            border-color: var(--accent-color) !important;
+            outline: none !important;
+            box-shadow: 0 0 0 3px rgba(234, 0, 0, 0.1) !important;
+        }
+
+        /* Icons */
+        .swal2-icon.swal2-success .swal2-success-ring {
+            border-color: #00bb00 !important;
+        }
+
+        .swal2-icon.swal2-success .swal2-success-fix {
+            /*background-color: #00bb00 !important;*/
+        }
+
+        .swal2-icon.swal2-success [class^="swal2-success-line"] {
+            /*background-color: #00bb00 !important;*/
+        }
+
+        .swal2-icon.swal2-error {
+            border-color: var(--error-color) !important;
+            color: var(--error-color) !important;
+        }
+
+        .swal2-icon.swal2-warning {
+            border-color: #f39c12 !important;
+            color: #f39c12 !important;
+        }
+
+        .swal2-icon.swal2-info {
+            border-color: var(--accent-color) !important;
+            color: var(--accent-color) !important;
+        }
+
+        /* Progress bar */
+        .swal2-progress-steps .swal2-progress-step {
+            background: var(--divider-color) !important;
+        }
+
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+            background: var(--accent-color) !important;
+        }
+
+        /* Close button */
+        .swal2-close {
+            color: var(--text-color) !important;
+            font-size: 1.5rem !important;
+        }
+
+        .swal2-close:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Dark mode support (optional) */
+        @media (prefers-color-scheme: dark) {
+            .swal2-popup {
+                background: var(--primary-color) !important;
+                border-color: var(--dark-divider-color) !important;
+            }
+
+            .swal2-title {
+                color: var(--white-color) !important;
+            }
+
+            .swal2-html-container {
+                color: var(--secondary-color) !important;
+            }
+
+            .swal2-input {
+                background: transparent !important;
+                border-color: var(--dark-divider-color) !important;
+                color: var(--white-color) !important;
+            }
+
+            .swal2-cancel {
+                border-color: var(--dark-divider-color) !important;
+                color: var(--secondary-color) !important;
+            }
+
+            .swal2-cancel:hover {
+                background-color: var(--dark-divider-color) !important;
+                color: var(--white-color) !important;
+            }
+        }
+
+        .active {
+            color: var(--accent-color) !important;
+        }
+    </style>
 </head>
 <body>
+@include('sweetalert::alert')
+
 <!-- Preloader Start -->
 <div class="preloader">
     <div class="loading-container">
@@ -58,12 +220,12 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="/">{{ __('Home') }}</a>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('home') ? "active" : "" }}" href="/">{{ __('Home') }}</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="/about">{{ __('About Us') }}</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/services">{{ __('Services') }}</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/projects">{{ __('Projects') }}</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/contact">{{ __('Contact Us') }}</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('about') ? "active" : "" }}" href="/about">{{ __('About Us') }}</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('services') ? "active" : "" }}" href="/services">{{ __('Services') }}</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('projects') ? "active" : "" }}" href="/projects">{{ __('Projects') }}</a></li>
+                            <li class="nav-item"><a class="nav-link {{ request()->routeIs('contact') ? "active" : "" }}" href="/contact">{{ __('Contact Us') }}</a></li>
                             <li class="menu-item-has-children"><a href="#">
                                 @if ( app()->currentLocale() == 'en')
                                     <img height="25" src="{{ asset('assets/images/flag/usa.png') }}" alt="English language icon">
@@ -92,7 +254,7 @@
                     <!-- Header Btn Start -->
                     <div class="header-btn">
                         <div class="header-contact-btn">
-                            <a href="tel:+13179937623" class="btn-phone"><img src="{{ asset('assets/images/icon-phone.svg') }}" alt="">+1 317 993 7623</a>
+                            <a href="{{ route('quotes.create') }}" class="btn-phone"><img src="{{ asset('assets/images/icon-why-choose-list-1.svg') }}" alt="">{{ __('Get free quote') }}</a>
                         </div>
 
                         <!-- Toggle Button trigger modal Start -->
@@ -308,5 +470,7 @@
 <script src="{{ asset('assets/js/wow.js') }}"></script>
 <!-- Main Custom js file -->
 <script src="{{ asset('assets/js/function.js') }}"></script>
+
+@stack('scripts')
 </body>
 </html>

@@ -28,7 +28,7 @@
                                         <!-- Section Title End -->
 
                                         <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                                            <a href="/contact" class="btn-default">{{ __('Explore More') }}</a>
+                                            <a href="{{ route('quotes.create') }}" class="btn-default">{{ __('Get free quote') }}</a>
                                         </div>
                                     </div>
                                     <!-- Hero Content End -->
@@ -62,7 +62,7 @@
                                         <!-- Section Title End -->
 
                                         <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                                            <a href="/contact" class="btn-default">{{ __('Explore More') }}</a>
+                                            <a href="{{ route('quotes.create') }}" class="btn-default">{{ __('Get free quote') }}</a>
                                         </div>
                                     </div>
                                     <!-- Hero Content End -->
@@ -574,7 +574,7 @@
                 <div class="col-lg-12">
                     <!-- Project Quote Text Start -->
                     <div class="project-quote-text wow fadeInUp" data-wow-delay="1s">
-                        <p><span>{{ __('Free') }}</span> {{ __("Let's make something great work together") }} <a href="/contact">{{ __('Get free quote') }}</a></p>
+                        <p><span>{{ __('Free') }}</span> {{ __("Let's make something great work together") }} <a href="{{ route('quotes.create') }}">{{ __('Get free quote') }}</a></p>
                     </div>
                     <!-- Project Quote Text End -->
                 </div>

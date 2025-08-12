@@ -17,7 +17,7 @@
     "Fast and Reliable Service": "Fast and Reliable Service",
     "Customer Satisfaction Guaranteed": "Customer Satisfaction Guaranteed",
     "Home": "Home",
-    "Services": "Home",
+    "Services": "Services",
     "Projects": "Projects",
     "Hero Text" : "Our skilled team delivers top-quality roofing solutions to safeguard your home, providing reliable installations, repairs.",
     "Explore More": "Explore more",
@@ -92,5 +92,40 @@
     "Testimonials": "Testimonials",
     "Testimonials Title": "What our clients are saying",
     "Testimonials Text": "Hear from our satisfied clients as they share their experiences with our roofing services, highlighting our professionalism.",
-    "Trusted by :number": "Trusted by :number companies"
+    "Trusted by :number": "Trusted by :number companies",
+
+    "Our Approach": "Our Approach",
+    "Our Approach Title": "Expert roofing solutions and repair",
+    "Our Mission" : "Our Mission",
+    "Our Mission Text": "Our mission is to provide high-quality roofing construction and repair services with a focus on durability, craftsmanship, and customer satisfaction, We are committed to ensuring safe.",
+    "Our Vision": "Our Vision",
+    "Our Vision Text": "Our vision is to be the leading provider of innovative and sustainable roofing solutions, setting the standard for excellence in construction and repair.",
+    "Our Value": "Our Value",
+    "Our Value Text": "Our values are rooted in integrity, quality, and customer satisfaction. We prioritize safety, craftsmanship, and transparency in every project, ensuring durable roofing solutions.",
+
+    "Key Benefits": "Key Benefits",
+    "Key Benefits Title": "Reliable roofing benefits you can trust",
+    "Key Benefits Description": "Our reliable roofing services provide peace of mind through exceptional durability, expert craftsmanship, and comprehensive warranties.",
+
+    "Durability and Longevity": "Durability and Longevity",
+    "Durability and Longevity Text": "High-quality materials and expert installation extend the lifespan of your roof, protecting your property for years.",
+    "Enhanced Curb Appeal": "Enhanced Curb Appeal",
+    "Enhanced Curb Appeal Text": "A well-maintained roof improves the overall appearance of your home or business, increasing its value and attractiveness.",
+    "Safety and Peace of Mind": "Safety and Peace of Mind",
+    "Safety and Peace of Mind Text": "Professional roofing services ensure your roof is safe and secure, giving you confidence in the protection of your home or business.",
+
+    "Total Project": "Total Project",
+
+
+    "Email Address": "Email Address",
+    "Location": "Location",
+    "Quotation Form": "Quotation Form",
+    "Get a free quote": "Get a free quote",
+
+    "First Name": "First Name",
+    "Last Name": "Last Name",
+    "Phone Number": "Phone Number",
+    "Message": "Message",
+    "Submit": "Submit"
+
 }
